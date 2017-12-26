@@ -104,3 +104,11 @@ set noswapfile
 " Write a file which needs sudo access, even if the vim windows/session was not ran with sudo
 ":w!!
 cmap w!! w !sudo tee > /dev/null %
+
+" Make the file directory the current directory:
+set autochdir
+set hlsearch
+set antialias
+" Make trailing spaces and tabs visibles
+set list listchars=tab:→\ ,trail:·
+
