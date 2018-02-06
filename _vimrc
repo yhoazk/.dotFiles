@@ -112,3 +112,7 @@ set antialias
 " Make trailing spaces and tabs visibles
 set list listchars=tab:→\ ,trail:·
 
+" Set the directoy where the ~ files will be saved
+
+set swapfile
+set dir=/tmp
