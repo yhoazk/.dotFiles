@@ -11,3 +11,14 @@
 	name = XXXXX
 	email = XXXXX.YYYYYY@ZZZZZZZ.com
 [user]
+
+[alias]
+  st = status -sb
+	ls = log --graph --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
+	filelog = log -u
+	find_file = "!git ls-files | grep -i"
+	grep = grep -Ii # comment
+	# remove all merged branches
+	bdm = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
