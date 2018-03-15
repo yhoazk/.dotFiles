@@ -75,7 +75,9 @@ set go-=r
 nnoremap <A-a> <C-a>
 " decrement the first number in the line with alt+x
 nnoremap <A-x> <C-x>
-
+" use :noh to turn off the highlight after search, but the noh is kept there
+" this mapping removes it after an enter in normal mode.
+nnoremap <cr> :noh<CR><CR>:<backspace>
 
 " Turn on wild menu
 set wildmenu
