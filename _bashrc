@@ -48,6 +48,10 @@ function extract {
 fi
 }
 
+# Avoid issuing the ssh creds every time
+# Only needed in KDE, in gnome this is already handled
+eval $(ssh-agent)
+
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
