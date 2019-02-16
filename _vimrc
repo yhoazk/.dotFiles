@@ -117,8 +117,10 @@ set list listchars=tab:→\ ,trail:·
 " Set the directoy where the ~ files will be saved
 
 set swapfile
+" Linux
 set dir=/tmp
-
+" windows
+set dir=$TEMP
 """""""""""""" PowerLine Stuff 
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
