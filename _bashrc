@@ -1,4 +1,6 @@
-
+if [[ -f /etc/bashrc ]]; then
+    . /etc/bashrc
+fi
 
 
 # For the common case of change to a dir and then list its contents
@@ -52,10 +54,12 @@ fi
 # Only needed in KDE, in gnome this is already handled
 eval $(ssh-agent)
 
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-source /usr/share/powerline/bash/powerline.sh
+if [[ -f `which powerline-daemon` ]]
+    powerline-daemon -q
+    POWERLINE_BASH_CONTINUATION=1
+    POWERLINE_BASH_SELECT=1
+    . /usr/share/powerline/bash/powerline.sh
+fi
 # Solves .ccache problem with bazel
 #   https://stackoverflow.com/questions/52370202/how-to-get-bazel-ccache-and-sandboxing-to-work-together-ccache-read-only-file/
 export CC="/usr/bin/gcc"
