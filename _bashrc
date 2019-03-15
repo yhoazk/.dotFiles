@@ -1,6 +1,4 @@
 
-
-
 # For the common case of change to a dir and then list its contents
 function cs () {
     cd "$@" && ls
