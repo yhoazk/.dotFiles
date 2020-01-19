@@ -16,7 +16,11 @@ set si "smart indent
 
 set viminfo^=%
 set smarttab
+" set absolute numbers
 set nu
+" also set relative numbers for hybrid mode
+set rnu
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
