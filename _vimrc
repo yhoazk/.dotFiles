@@ -82,6 +82,9 @@ set nowb
 set noswapfile
 
 
+" DO NOT FOLD MY STUFFF
+set nofoldenable
+
 " Write a file which needs sudo access, even if the vim windows/session was not ran with sudo
 ":w!!
 cmap w!! w !sudo tee > /dev/null %
