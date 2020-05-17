@@ -21,6 +21,8 @@ gksu nautilus
   sudo fc-cache -fv
 ```
 
+#### Fonts to install:
+[fantasque](https://github.com/belluzj/fantasque-sans)
 
 ## .gitconfig
 Git configuration for beyond compare and commit credentials
