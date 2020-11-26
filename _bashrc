@@ -1,17 +1,33 @@
+# .bashrc
+
+# Source global definitions
 if [[ -f /etc/bashrc ]]; then
     . /etc/bashrc
 fi
 
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+PATH="$HOME/.cargo/bin:$PATH"
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
 
 # For the common case of change to a dir and then list its contents
 function cs () {
     cd "$@" && ls
-    }
+}
 
 # Remember to use a command which has an alias escape the command eg \ls
 alias ll="ls -lhA"
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ip="ip -c"
+alias g="git"
 
 
 function extract {
@@ -52,7 +68,7 @@ fi
 
 # Avoid issuing the ssh creds every time
 # Only needed in KDE, in gnome this is already handled
-eval $(ssh-agent)
+#eval $(ssh-agent)
 
 if [[ -f `which powerline-daemon` ]]; then
     powerline-daemon -q
