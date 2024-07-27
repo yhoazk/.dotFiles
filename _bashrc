@@ -26,8 +26,14 @@ alias ll="ls -lhA"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias .....="cd ../../../.."
 alias ip="ip -c"
 alias g="git"
+alias bc="bc -lq"
+alias tmuxx="tmux attach || tmux"
+#stop unmounted disk from spinning
+# as a parameter give the device /dev/sdX
+alias stopspinning="udisksctl power-off -b"
 
 
 function extract {
